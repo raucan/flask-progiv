@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<a href="http://127.0.0.1:5000/ "><button>Volver al menu</button><a/>
+<h1>Agregar Palabra</h1>
+{%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+<form action = "{{ request.path }}" method = "post">
+         <label >Palabra</label><br>
+         <input type = "text" name = "palabra" placeholder = "Palabra" /><br>
+         <label >Nuevo Significado</label><br>
+         <input type = "text" name = "significado" placeholder = "nuevo significado" /><br>
+<input type="submit" value="Submit">
+
+</body>
+</html>

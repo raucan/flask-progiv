@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<a href="http://127.0.0.1:5000/"><button>Volver al menu</button><a/>
+<h1>Eliminar Palabra</h1>
+
+<form action = "{{ request.path }}" method = "post">
+         <label >Palabra</label><br>
+         <input type = "text" name = "palabra" placeholder = "palabra" /><br>
+         <input type="submit" value="Submit">
+
+</body>
+</html>

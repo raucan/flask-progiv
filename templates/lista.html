@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <a href="http://127.0.0.1:5000/ "><button>Volver al menu</button><a/>
+
+
+      <h3>Palabras (<a href = "{{ url_for('agregar') }}">Agregar palabra
+         </a>)</h3>
+
+      <table>
+         <thead>
+            <tr>
+               <th>Palabra</th>
+               <th>Significado</th>
+
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for palabra in diccionario %}
+               <tr>
+                  <td>{{ palabra.palabra }}</td>
+                  <td>{{ palabra.significado }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+</html>
